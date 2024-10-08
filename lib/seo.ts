@@ -1,10 +1,10 @@
 export const seo = {
-  title: 'Cali Castle | 开发者、设计师、细节控、创始人',
+  title: '猫狗之家 | Telegram 新手指南、使用教程、频道推荐',
   description:
-    '我叫 Cali，一名开发者，设计师，细节控，同时也是佐玩创始人，目前带领着佐玩致力于创造一个充满创造力的工作环境，同时鼓励团队创造影响世界的产品。',
+    '猫狗之家专注于玩转Telegram，有新手指南、使用教程和不定期的频道推荐',
   url: new URL(
     process.env.NODE_ENV === 'production'
-      ? 'https://cali.so'
+      ? 'https://www.amag365.top'
       : 'http://localhost:3000'
   ),
 } as const
