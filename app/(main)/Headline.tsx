@@ -10,7 +10,7 @@ import { SparkleIcon, UserSecurityIcon } from '~/assets'
 function Developer() {
   return (
     <span className="group">
-      <span className="font-mono">&lt;</span>使用指南
+      <span className="font-mono">&lt;</span>电报指南
       <span className="font-mono">/&gt;</span>
       <span className="invisible inline-flex text-zinc-300 before:content-['|'] group-hover:visible group-hover:animate-typing dark:text-zinc-500" />
     </span>
@@ -26,7 +26,7 @@ function Designer() {
         <span className="absolute -bottom-[3.5px] -left-[3.5px] size-1.5 border border-lime-700 bg-zinc-50 dark:border-lime-400" />
         <span className="absolute -right-[3.5px] -top-[3.5px] size-1.5 border border-lime-700 bg-zinc-50 dark:border-lime-400" />
       </span>
-      最新资讯
+      资讯
     </span>
   )
 }
@@ -44,7 +44,7 @@ function Founder() {
   return (
     <span className="group inline-flex items-center">
       <UserSecurityIcon className="mr-1 inline-flex group-hover:fill-zinc-600/20 dark:group-hover:fill-zinc-200/20" />
-      <span>开发交流</span>
+      <span>交流</span>
     </span>
   )
 }
@@ -62,7 +62,7 @@ export function Headline() {
           stiffness: 100,
           duration: 0.3,
         }}
-      >
+      > 
         <Developer />，<Designer />，
         <span className="block h-2" />
         <OCD />，<Founder />

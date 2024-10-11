@@ -1,7 +1,7 @@
 export const navigationItems = [
   { href: '/', text: '首页' },
+  { href: '/blog', text: '群组推荐' },
   { href: '/news', text: '资讯' },
-  { href: '/group', text: '群组推荐' },
   // { href: '/blog', text: '博客' },
   // { href: '/projects', text: '项目' },
   // { href: '/guestbook', text: '留言墙' },
