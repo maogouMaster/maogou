@@ -1,3 +1,5 @@
+import 'easymde/dist/easymde.min.css'
+
 import Studio from './Studio'
 
 // Ensures the Studio route is statically generated

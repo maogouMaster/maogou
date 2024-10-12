@@ -4,6 +4,8 @@ import { z } from 'zod'
 import { PencilSwooshIcon } from '~/assets'
 import { readingTimeType } from '~/sanity/schemas/types/readingTime'
 
+import { CustomMarkdownInput } from './CustomMarkdownInput'
+
 export const Post = z.object({
   _id: z.string(),
   title: z.string(),
@@ -25,6 +27,7 @@ export const Post = z.object({
   description: z.string(),
   categories: z.array(z.string()).optional(),
   body: z.any(),
+  markdownBody: z.string(),
   readingTime: z.number(),
   mood: z.enum(['happy', 'sad', 'neutral']),
 })
@@ -90,6 +93,15 @@ export default defineType({
       name: 'body',
       title: '内容',
       type: 'blockContent',
+    }),
+    defineField({
+      name: 'markDownBody',
+      type: 'markdown',
+      title: 'markdonw内容',
+      components: {input: CustomMarkdownInput},
+      options: {
+        imageUrl: (imageAsset) => `${imageAsset.url}?w=400&h=400`,
+      },
     }),
     defineField({
       name: 'readingTime',

@@ -2,8 +2,8 @@
 
 import { parseDateTime } from '@zolplay/utils'
 import { motion } from 'framer-motion'
+import { marked } from 'marked'
 import Image from 'next/image'
-import React from 'react'
 import Balancer from 'react-wrap-balancer'
 
 import { BlogPostStateLoader } from '~/app/(main)/blog/BlogPostStateLoader'
@@ -172,6 +172,7 @@ export function BlogPostPage({
             </header>
             <Prose className="mt-8">
               <PostPortableText value={post.body} />
+              <div className="markdown-content" dangerouslySetInnerHTML={{ __html: marked(post.markdownBody) }} />
             </Prose>
           </article>
         </div>

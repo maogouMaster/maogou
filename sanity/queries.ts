@@ -60,6 +60,7 @@ export const getBlogPostQuery = groq`
     publishedAt,
     readingTime,
     mood,
+    markdownBody,
     body[] {
       ...,
       _type == "image" => {
