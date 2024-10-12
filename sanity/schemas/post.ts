@@ -95,7 +95,7 @@ export default defineType({
       type: 'blockContent',
     }),
     defineField({
-      name: 'markDownBody',
+      name: 'markdownBody',
       type: 'markdown',
       title: 'markdonw内容',
       components: {input: CustomMarkdownInput},

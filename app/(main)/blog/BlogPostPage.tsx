@@ -171,8 +171,8 @@ export function BlogPostPage({
               </motion.div>
             </header>
             <Prose className="mt-8">
-              <PostPortableText value={post.body} />
-              <div className="markdown-content" dangerouslySetInnerHTML={{ __html: marked(post.markdownBody) }} />
+              { post.body && <PostPortableText value={post.body} /> }
+              { post.markdownBody && <div className="markdown-content" dangerouslySetInnerHTML={{ __html: marked(post.markdownBody) }} /> }
             </Prose>
           </article>
         </div>
