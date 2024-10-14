@@ -43,7 +43,7 @@ export function BlogPostPage({
       <div className="w-full md:flex md:justify-between xl:relative">
         <aside className="hidden w-[160px] shrink-0 lg:block">
           <div className="sticky top-2 pt-20">
-            <BlogPostTableOfContents headings={post.headings} />
+            { post.headings && <BlogPostTableOfContents headings={post.headings} /> }
           </div>
         </aside>
         <div className="max-w-2xl md:flex-1 md:shrink-0">
