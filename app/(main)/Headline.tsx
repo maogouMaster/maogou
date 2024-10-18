@@ -80,7 +80,7 @@ export function Headline() {
         }}
       >
         <Balancer>
-          欢迎来到我们的Telegram指南网站！我们致力于为用户提供全面的新手指南、实用的使用教程及精选的频道推荐，助您在Telegram腾飞起来。
+          欢迎来到我们的Telegram指南网站！我们致力于为用户分享Telegram优质频道、群组及机器人，提供Telegram相关教程攻略。
         </Balancer>
       </motion.p>
       {/* <motion.div
