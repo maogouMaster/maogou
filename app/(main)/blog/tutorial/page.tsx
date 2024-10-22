@@ -6,28 +6,14 @@ import { Container } from '~/components/ui/Container'
 import { BlogPosts } from '../BlogPosts'
 
 const description =
-  '机器人推荐'
-export const metadata = {
-  title: '我的博客',
-  description,
-  openGraph: {
-    title: '我的博客',
-    description,
-  },
-  twitter: {
-    title: '我的博客',
-    description,
-    card: 'summary_large_image',
-  },
-}
-
+  '磨刀不误砍柴工，掌握好技巧，如同手握通关秘钥，站在巨人的肩膀上，坑我都帮你趟过了一次，弯路必然少走很多，事半功倍。'
 // TODO: add pagination or infinite scroll
 export default function BlogPage() {
   return (
     <Container className="mt-16 sm:mt-24">
       <header className="max-w-2xl">
         <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-          谨防被骗
+        工欲善其事，必先利其器。
         </h1>
         <p className="my-6 text-base text-zinc-600 dark:text-zinc-400">
           <Balancer>{description}</Balancer>

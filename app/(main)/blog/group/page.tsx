@@ -6,20 +6,7 @@ import { Container } from '~/components/ui/Container'
 import { BlogPosts } from '../BlogPosts'
 
 const description =
-  '所有推荐的群组都经过筛选，以最大程度避免钓鱼或欺诈行为。然而，我们也提醒用户，参与群组的成年人应具备分辨能力，切勿轻易相信“免费的午餐”。在任何情况下，请谨记，真正的价值总需付出代价，保持警惕，谨慎选择。'
-export const metadata = {
-  title: '我的博客',
-  description,
-  openGraph: {
-    title: '我的博客',
-    description,
-  },
-  twitter: {
-    title: '我的博客',
-    description,
-    card: 'summary_large_image',
-  },
-}
+  '我推荐的群组都经过筛选，可以最大程度避免钓鱼或欺诈行为。然而，我还是要提醒大家，成年人应具备分辨能力，切勿轻易相信“免费的午餐”。在任何情况下，请谨记，“真正的价值总需付出代价”，保持警惕，要给钱的都是骗子。'
 
 // TODO: add pagination or infinite scroll
 export default function BlogPage() {
