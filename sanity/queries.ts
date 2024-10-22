@@ -19,14 +19,29 @@ export const getAllLatestBlogPostSlugs = () => {
 type GetBlogPostsOptions = {
   limit?: number
   offset?: number
-  forDisplay?: boolean
+  forDisplay?: boolean,
+  categorySlug?: string[],
 }
 export const getLatestBlogPostsQuery = ({
   limit = 5,
   forDisplay = true,
-}: GetBlogPostsOptions) =>
-  groq`
-  *[_type == "post" && !(_id in path("drafts.**")) && publishedAt <= "${getDate().toISOString()}"
+  categorySlug = [],
+}: GetBlogPostsOptions) => {
+  let categorySlugStr = "";
+  categorySlug.forEach((s, i) => {
+    if (i === 0) {
+      categorySlugStr = " && ("
+    } else {
+      categorySlugStr += " || "
+    }
+    categorySlugStr += ` "${s}" in categories[]->slug.current `
+    if (i === categorySlug.length - 1) {
+      categorySlugStr += ")"
+    }
+  });
+  console.log("categorySlugStr",categorySlugStr)
+  return groq`
+  *[_type == "post" ${categorySlugStr}  && !(_id in path("drafts.**")) && publishedAt <= "${getDate().toISOString()}"
   && defined(slug.current)] | order(publishedAt desc)[0...${limit}] {
     _id,
     title,
@@ -39,14 +54,14 @@ export const getLatestBlogPostsQuery = ({
       _ref,
       asset->{
         url,
-        ${
-          forDisplay
-            ? '"lqip": metadata.lqip, "dominant": metadata.palette.dominant,'
-            : ''
-        }
+        ${forDisplay
+      ? '"lqip": metadata.lqip, "dominant": metadata.palette.dominant,'
+      : ''
+    }
       }
     }
   }`
+}
 export const getLatestBlogPosts = (options: GetBlogPostsOptions) =>
   client.fetch<Post[] | null>(getLatestBlogPostsQuery(options))
 
@@ -124,12 +139,12 @@ export const getSettings = () =>
     projects: Project[] | null
     heroPhotos?: string[] | null
     resume?:
-      | {
-          company: string
-          title: string
-          logo: string
-          start: string
-          end?: string
-        }[]
-      | null
+    | {
+      company: string
+      title: string
+      logo: string
+      start: string
+      end?: string
+    }[]
+    | null
   }>(getSettingsQuery())
