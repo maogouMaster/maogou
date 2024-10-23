@@ -1,24 +1,26 @@
-import './globals.css'
 import './clerk.css'
+import './globals.css'
 import './prism.css'
 
 import { ClerkProvider } from '@clerk/nextjs'
 import type { Metadata, Viewport } from 'next'
 
+import { GoogleTagManager } from '@next/third-parties/google'
 import { ThemeProvider } from '~/app/(main)/ThemeProvider'
 import { url } from '~/lib'
 import { zhCN } from '~/lib/clerkLocalizations'
 import { sansFont } from '~/lib/font'
 import { seo } from '~/lib/seo'
 
+
 export const metadata: Metadata = {
   metadataBase: seo.url,
   title: {
-    template: '%s | Cali Castle',
+    template: '%s | Telegram中文社区',
     default: seo.title,
   },
   description: seo.description,
-  keywords: 'Cali,Cali Castle,郭晓楠,佐玩,创始人,CEO,开发者,设计师,细节控,创新',
+  keywords: 'Telegram,telegram教程攻略,telegram中文社区,telegram群组推荐,telegram机器人,telegram开发',
   manifest: '/site.webmanifest',
   robots: {
     index: true,
@@ -34,7 +36,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: {
       default: seo.title,
-      template: '%s | Cali Castle',
+      template: '%s | Telegram中文社区',
     },
     description: seo.description,
     siteName: 'Cali Castle',
@@ -43,8 +45,8 @@ export const metadata: Metadata = {
     url: 'https://cali.so',
   },
   twitter: {
-    site: '@thecalicastle',
-    creator: '@thecalicastle',
+    site: '@amag365.top',
+    creator: '@amag365.top',
     card: 'summary_large_image',
     title: seo.title,
     description: seo.description,
@@ -85,7 +87,7 @@ export default function RootLayout({
           >
             {children}
           </ThemeProvider>
-        </body>
+        </body><GoogleTagManager gtmId="G-1YQZGMDMW7" />
       </html>
     </ClerkProvider>
   )
