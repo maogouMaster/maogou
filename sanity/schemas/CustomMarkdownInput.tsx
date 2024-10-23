@@ -1,6 +1,6 @@
 // CustomMarkdownInput.tsx
-import {MarkdownInput, MarkdownInputProps} from 'sanity-plugin-markdown/next'
 import React from 'react'
+import {MarkdownInput, type MarkdownInputProps} from 'sanity-plugin-markdown/next'
 
 export function CustomMarkdownInput(props) {
   const reactMdeProps: MarkdownInputProps['reactMdeProps'] = React.useMemo(() => {

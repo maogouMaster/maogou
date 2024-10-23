@@ -3,9 +3,9 @@ import './globals.css'
 import './prism.css'
 
 import { ClerkProvider } from '@clerk/nextjs'
+import { GoogleTagManager } from '@next/third-parties/google'
 import type { Metadata, Viewport } from 'next'
 
-import { GoogleTagManager } from '@next/third-parties/google'
 import { ThemeProvider } from '~/app/(main)/ThemeProvider'
 import { url } from '~/lib'
 import { zhCN } from '~/lib/clerkLocalizations'
