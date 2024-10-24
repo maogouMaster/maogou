@@ -3,7 +3,6 @@ import './globals.css'
 import './prism.css'
 
 import { ClerkProvider } from '@clerk/nextjs'
-import { GoogleAnalytics } from '@next/third-parties/google'
 import type { Metadata, Viewport } from 'next'
 
 import { ThemeProvider } from '~/app/(main)/ThemeProvider'
@@ -87,7 +86,7 @@ export default function RootLayout({
           >
             {children}
           </ThemeProvider>
-        </body><GoogleAnalytics gaId="G-1YQZGMDMW7" />
+        </body>
       </html>
     </ClerkProvider>
   )
