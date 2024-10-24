@@ -3,7 +3,7 @@ import './globals.css'
 import './prism.css'
 
 import { ClerkProvider } from '@clerk/nextjs'
-import { GoogleTagManager } from '@next/third-parties/google'
+import { GoogleAnalytics } from '@next/third-parties/google'
 import type { Metadata, Viewport } from 'next'
 
 import { ThemeProvider } from '~/app/(main)/ThemeProvider'
@@ -39,10 +39,10 @@ export const metadata: Metadata = {
       template: '%s | Telegram中文社区',
     },
     description: seo.description,
-    siteName: 'Cali Castle',
+    siteName: '猫狗之家 | Telegram 新手指南、使用教程、频道推荐',
     locale: 'zh_CN',
     type: 'website',
-    url: 'https://cali.so',
+    url: 'https://www.amag365.top/',
   },
   twitter: {
     site: '@amag365.top',
@@ -87,7 +87,7 @@ export default function RootLayout({
           >
             {children}
           </ThemeProvider>
-        </body><GoogleTagManager gtmId="G-1YQZGMDMW7" />
+        </body><GoogleAnalytics gaId="G-1YQZGMDMW7" />
       </html>
     </ClerkProvider>
   )
