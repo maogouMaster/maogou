@@ -44,8 +44,8 @@ export const metadata: Metadata = {
     url: 'https://www.amag365.top/',
   },
   twitter: {
-    site: '@amag365.top',
-    creator: '@amag365.top',
+    site: '@www.amag365.top',
+    creator: '@www.amag365.top',
     card: 'summary_large_image',
     title: seo.title,
     description: seo.description,
