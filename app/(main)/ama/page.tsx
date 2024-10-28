@@ -1,16 +1,13 @@
-import Image from 'next/image'
 import Balancer from 'react-wrap-balancer'
 
 import { RichLink } from '~/components/links/RichLink'
 import { Container } from '~/components/ui/Container'
 
-import AlipayQR from './alipay-qr.jpg'
-import ThankYouLetterScreenshot1 from './Arc aagD26w9@2x.png'
-import ThankYouLetterScreenshot2 from './Arc ynleUdHy@2x.png'
+// import AlipayQR from './alipay-qr.jpg'
 
 const title = 'AMA 一对一咨询'
 const description =
-  'Cali 提供一对一的咨询服务（Ask Me Anything）。我有前端开发、全栈开发、UI/UX 设计、创业经验、英语技能、美国留学与工作、内容创作等经验，可以为你解答相关的问题，我也支持纯英语沟通。'
+  '我们提供一对一的咨询服务（Ask Me Anything），20年大厂开发和项目管理经验，同时有个8人开发团队，可以为你解答相关的问题，我也支持纯英语沟通。'
 
 export const metadata = {
   title,
@@ -39,47 +36,46 @@ export default function AskMeAnythingPage() {
       </header>
 
       <article className="prose dark:prose-invert">
-        <h2>咨询内容</h2>
-        <p>我可以为你解答以下相关的问题：</p>
+        <h2>服务内容</h2>
+        <p>我可以服务以下相关的问题：</p>
         <ul>
           <li>
-            <b>前端/全栈开发</b>
-            ：工作难找，或是寻求职场建议？想提升自己的工程师水平？还是想锐评
-            React vs Vue？
+            <b>机器人开发</b> ：电报机器人开发是我们最近最热门的项目，服务过100+用户，实力过硬。
           </li>
           <li>
-            <b>UI/UX 设计</b>：不知道如何开始学习设计？想提升自己的设计水平？
+            <b>系统定制</b>：APP、小程序、博客、论坛...团队有产品/UI/前端/后端/数据工程师。
           </li>
           <li>
-            <b>创业经验</b>
-            ：我是
-            <RichLink href="https://zolplay.com" target="_blank">
-              佐玩
-            </RichLink>
-            的创始人，现在带领着团队帮助游戏开发者打造协同平台。
+            <b>疑难/bug解决</b>：做过数据迁移，数据库维护，网络电话，机场维护，项目咨询建议。
           </li>
           <li>
-            <b>英语技能</b>：英语能力不足，想提高自己的英语水平？想跟 Cali
-            一样可以{' '}
-            <RichLink
-              href="https://y.qq.com/n/ryqq/songDetail/003c0O9B3firAU"
-              favicon={false}
-              target="_blank"
-            >
-              英文说唱
-            </RichLink>
-            ？
+            <b>渗透测试</b>：这算是广告了，推荐对接第三方团队的，可攻可守技术过硬。
           </li>
           <li>
-            <b>其他</b>
-            ：我的美国留学与工作经验，内容创作，音乐制作经验等等都可以帮助你解答一些其他的问题。
+            <b>其他</b>：如果你想聊天，探讨下当前发财路子，也欢迎打扰
           </li>
         </ul>
         <p>
           你也可以全程跟我用英语聊，我也非常乐意，因为可能我的英语比中文说的要好。。。
         </p>
+        <p>
+          <strong>
+            BTW：暂不招人，有招聘计划会公布。
+          </strong>
+        </p>
 
-        <h2>定价</h2>
+        <h2>联系方式</h2>
+        <p>
+          通过{' '}
+          <RichLink
+            href="https://t.me/maogouluyou"
+            target="_blank"
+          >
+            这个链接
+          </RichLink>
+          来跟我预约一个合适你的时间。
+        </p>
+        {/* <h2>定价</h2>
         <p>我的一对一咨询的价格为：</p>
         <ul>
           <li>
@@ -105,9 +101,9 @@ export default function AskMeAnythingPage() {
             这个链接
           </RichLink>
           来跟我预约一个合适你的时间。
-        </p>
+        </p> */}
 
-        <h2>感谢信</h2>
+        {/* <h2>感谢信</h2>
         <p>
           下面两个截图摘选自两名 Twitter
           朋友的私信，能够帮助到更多的人一直是我的使命：
@@ -123,7 +119,7 @@ export default function AskMeAnythingPage() {
             alt=""
             className="max-w-full"
           />
-        </p>
+        </p> */}
       </article>
     </Container>
   )

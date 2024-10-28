@@ -1,12 +1,13 @@
 import Balancer from 'react-wrap-balancer'
 
+import { RichLink } from '~/components/links/RichLink'
 import { SocialLink } from '~/components/links/SocialLink'
 import { Container } from '~/components/ui/Container'
 
 import { BlogPosts } from '../BlogPosts'
 
 const description =
-  'Telegram的机器人是自动化的程序，可以在聊天中执行各种任务。它们可以帮助用户获取信息、管理群组、提供服务或进行互动。用户通过发送命令或消息与机器人互动，机器人则根据预设的功能和逻辑快速响应。无论是查天气、获取新闻、玩游戏，还是进行自动化工作，Telegram的机器人为用户提供了便利和乐趣，极大提升了使用体验。'
+  'Telegram的机器人是自动化的程序，可以在聊天中执行各种任务。它们可以帮助用户获取信息、管理群组、提供服务或进行互动。用户通过发送命令或消息与机器人互动，机器人则根据预设的功能和逻辑快速响应。无论是查天气、获取新闻、玩游戏，还是进行自动化工作。'
 
 // TODO: add pagination or infinite scroll
 export default function BlogPage() {
@@ -18,6 +19,15 @@ export default function BlogPage() {
         </h1>
         <p className="my-6 text-base text-zinc-600 dark:text-zinc-400">
           <Balancer>{description}</Balancer>
+          <Balancer>
+            另外，如果需要机器人开发请
+            <RichLink
+              href="https://t.me/maogouluyou"
+              target='_blank'
+            >
+              联系我们
+            </RichLink>。
+          </Balancer>
         </p>
         <p className="flex items-center">
           <SocialLink href="/feed.xml" platform="rss" />
