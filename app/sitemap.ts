@@ -14,6 +14,18 @@ export default async function sitemap() {
       lastModified: new Date(),
     },
     {
+      url: url('/blog/tutorial').href,
+      lastModified: new Date(),
+    },
+    {
+      url: url('/blog/group').href,
+      lastModified: new Date(),
+    },
+    {
+      url: url('/blog/robot').href,
+      lastModified: new Date(),
+    },
+    {
       url: url('/projects').href,
       lastModified: new Date(),
     },
